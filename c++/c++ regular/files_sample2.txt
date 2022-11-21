@@ -1,0 +1,22 @@
+notes for files I/O
+    note ->
+        -->   ifstream is to read any lines in a files and store it in a string
+                -->you can use two methods to do it 
+                    1.using its default method
+                        objectname>> string;  
+                        -->   default reading function using operands >> can only print one word after it will be terminated.
+                    2.using getline function 
+                        getline(objname,string);
+                        -->   getline also has its downsides it will only print one line and as new line is shown it will be terminated.
+        -->   ofstream is to write any lines in a file
+                -->there is simply only one easy method
+                    objectname<<"content you want to print ";
+        -->there are two ways to open files in files I/O 
+                    1.using its constructor
+                        classname(*ifstream or ofstream) objname("filesname.txt);
+                    2. create an object and then open it by void open function
+                        ofstream |or| ifstream objname;
+                        open.objname("filesname.txt");
+        -->   you can't write in a file and read in a file at same time
+        -->   you can close the files by only one function which is void close
+                -->objname.close();
